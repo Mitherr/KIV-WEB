@@ -1,0 +1,94 @@
+{{ include('administration/navigation.htm') }}
+
+<div class="container">
+
+    <form class="centered-form" method="post" enctype='multipart/form-data'>
+
+        <div class="panel panel-default">
+
+            <div class="panel-heading text-center">
+                <h3>Přidat Článek</h3>
+            </div>
+
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <label for="title">Názec článku:</label>
+                    <textarea class="form-control" rows="1" id="title" name="title"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="abstract">Abstract:</label>
+                    <textarea class="form-control" rows="10" id="abstract" name="abstract"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <label class="control-label">Vyberte pdf soubor ve kterém se nachází článek</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <label class="input-group-btn">
+                    <span class="btn btn-primary btn-my">
+                        Browse&hellip; <input type="file" name="file" id="fileToUpload" style="display: none;" multiple>
+                    </span>
+                </label>
+                            <input type="text" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    {{ obsah | raw }}
+                </div>
+
+
+                <div class="form-group">
+                    <div class="text-center">
+                        <button class="btn btn btn-primary btn-block btn-my" type="submit">
+         Přidat článek</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+<script>
+    $(function() {
+
+
+        $(document).on('change', ':file', function() {
+            var input = $(this),
+                numFiles = input.get(0).files ? input.get(0).files.length : 1,
+                label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+            input.trigger('fileselect', [numFiles, label]);
+        });
+
+
+        $(document).ready(function() {
+            $(':file').on('fileselect', function(event, numFiles, label) {
+
+                var input = $(this).parents('.input-group').find(':text'),
+                    log = numFiles > 1 ? numFiles + ' files selected' : label;
+
+                if (input.length) {
+                    input.val(log);
+                } else {
+                    if (log) alert(log);
+                }
+
+            });
+        });
+
+    });
+</script>

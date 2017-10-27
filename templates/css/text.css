@@ -1,0 +1,15 @@
+p.white	{
+	color: white;
+    font-size: 150%;
+}
+
+a.bigger	{
+    font-size: 150%;
+    color: #0000cc;
+}
+
+t1.head {
+    color:white;
+    font-size:250%;
+    padding-bottom: 100px;
+}

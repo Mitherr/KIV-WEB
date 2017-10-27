@@ -1,0 +1,30 @@
+{{ include('administration/navigation.htm') }}
+
+<div class="container-fluid">
+    <div class="panel panel-default">
+
+        <div class="panel-heading text-center">
+            <h2>{{ heading | raw }}</h2>
+        </div>
+
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            {{ sloupce | raw }}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{ obsah | raw }}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>

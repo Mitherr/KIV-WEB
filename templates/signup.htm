@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="cs">
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="templates\css\navbar.css">
+    <link rel="stylesheet" type="text/css" href="templates\css\signup.css">
+</head>
+
+<body>
+
+    <div id="container">
+        {{ include('navigation.htm') }}
+    </div>
+
+    <div class="container">
+        <div class="row centered-form ">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title text-center">Sign up</h3>
+                </div>
+                <div class="panel-body">
+                    <form role="form" method="post">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label for="first_name">First name:</label>
+                                    <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name" required maxlength="30" required>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label for="last_name">Last name:</label>
+                                    <input type="text" name="surname" id="surname" class="form-control input-sm" placeholder="Last Name" maxlength="30" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address" maxlength="100" required>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label for="password">Password:</label>
+                                    <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password" maxlength="15" required>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label for="password_confirmation">Confirm Password</label>
+                                    <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            {{ obsah | raw }}
+                        </div>
+
+                        <input type="submit" value="Register" class="btn btn-info btn-block  btn-my">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>   
+    
+</body>  

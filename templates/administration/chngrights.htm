@@ -1,0 +1,40 @@
+{{ include('administration/navigation.htm') }}
+
+<div class="container">
+
+    <form class="centered-form" method="post">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title text-center">Změň práva uživateli {{ user_name | raw }} </h3>
+            </div>
+
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <label for="last_name">Vyber práva:</label>
+                    <select class="form-control" name="right" id="right">
+            <option>Autor</option>
+            <option>Recenzent</option>
+            <option>Administrátor</option>
+            </select>
+                </div>
+
+
+                <div class="row">
+                    {{ obsah | raw }}
+                </div>
+
+
+                <div class="text-center">
+                    <button class="btn btn btn-primary btn-block btn-my" type="submit">Změnit</button>
+                </div>
+
+            </div>
+        </div>
+
+    </form>
+
+
+    </body>
+
+    </html>

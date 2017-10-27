@@ -1,0 +1,15 @@
+<nav class="navbar navbar-changed" style="margin-bottom: 0">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.php?n=home">Deep learning</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="index.php?n=home">Home</a></li>
+            <li><a href="index.php?n=articles">Příspěvky</a></li>
+            {{ menu_left | raw }}
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            {{ menu_right_name | raw }} {{ menu_right_pages | raw }} {{ menu_right_signout | raw }}
+        </ul>
+    </div>
+</nav>

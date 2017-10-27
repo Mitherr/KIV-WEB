@@ -1,0 +1,86 @@
+{{ include('administration/navigation.htm') }}
+
+<div class="container">
+
+    <form class="centered-form" method="post" enctype='multipart/form-data'>
+
+        <div class="panel panel-default">
+
+            <div class="panel-heading text-center">
+                <h3>Upravit recenzi</h3>
+            </div>
+
+            <div class="panel-body">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="text-center">Článek:</label>
+                        <p class="text-center">
+                            {{ review | raw }}
+                        </p>
+                        <p class="text-center">
+                            {{ reviewBTN | raw }}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="abstract">Hodnocení:</label>
+                    <textarea class="form-control" rows="5" id="review" name="review"></textarea>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label for="originality">Originalita:</label>
+                        <select class="form-control" id="originality" name="originality">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="theme">Téma:</label>
+                        <select class="form-control" id="theme" name="theme">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="quality">Kvalita:</label>
+                        <select class="form-control" id="quality" name="quality">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        </select>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    {{ obsah | raw }}
+                </div>
+
+
+                <div class="form-group">
+                    <div class="text-center">
+                        <button class="btn btn btn-primary btn-block btn-my" type="submit">
+         Uložit recenzi</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </form>
+
+</div>

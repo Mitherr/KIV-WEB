@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="cs">
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="templates\css\navbar.css">
+    <link rel="stylesheet" type="text/css" href="templates\css\body.css">
+    <link rel="stylesheet" type="text/css" href="templates\css\text.css">
+
+</head>
+
+<body>
+
+    <div id="container"
+         >
+        {{ include('navigation.htm') }}
+
+        
+        
+        <div class="row">
+        <img src="/images/home.png" style="display: block;max-width: 100%;width: 100%;max-height: 250px;" alt="Deeplearning">   
+        </div> 
+        
+        {{ obsah | raw }}
+        
+        
+        </div>
+    
+</body>
+
+</html>

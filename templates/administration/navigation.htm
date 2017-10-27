@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="cs">
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="templates\css\navbar.css">
+    <link rel="stylesheet" type="text/css" href="templates\css\login.css">
+    <link rel="stylesheet" type="text/css" href="templates\css\body.css">
+    <link rel="stylesheet" type="text/css" href="templates\css\btn-file.css">
+    <link rel="stylesheet" type="text/css" href="templates\css\text.css">
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-changed">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.php?n=home">Deep learning </a>
+
+                <ul class="nav navbar-nav">
+                    {{ menu_left | raw }}
+                </ul>
+
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                {{ menu_right_name | raw }} {{ menu_right_signout | raw }}
+            </ul>
+
+        </div>
+    </nav>
